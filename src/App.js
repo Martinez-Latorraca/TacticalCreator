@@ -8,14 +8,21 @@ function App() {
   return (
     <div className="App">
       <Field param={pattern}></Field>
-      <select className="patternSelector" onChange={(e) => setPattern(e.target.value)}>
-        <option selected disabled value="">Selecciona la patron</option>
-        <option value="Circles">Circulos</option>
-        <option value="Lines">Lineas</option>
-        <option value="Squares">Cuadrados</option>
-      </select>
+      <div>
+        <select
+          className="patternSelector"
+          onChange={(e) => setPattern(e.target.value)}
+        >
+          <option selected disabled value="">
+            Selecciona la patron
+          </option>
+          <option value="Circles">Circulos</option>
+          <option value="Lines">Lineas</option>
+          <option value="Squares">Cuadrados</option>
+        </select>
+      </div>
 
-      <Player/>
+      <Player />
     </div>
   );
 }
