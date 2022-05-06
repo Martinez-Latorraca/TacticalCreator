@@ -1,5 +1,5 @@
-import "../../App.css";
-import image2 from "./img/player1.png";
+import "./player.css";
+import playerImage from "./img/player1.png";
 import { useState, useRef } from "react";
 import useDrag from "../../hooks/useDrag";
 
@@ -12,6 +12,7 @@ const Player = () => {
       y: position.y + e.movementY,
     });
   };
+  // eslint-disable-next-line no-unused-vars
   const drag = useDrag(divRef, [position], {
     onDrag: onPlayerClick,
   });
@@ -22,7 +23,7 @@ const Player = () => {
       ref={divRef}
       className="playerHome"
       style={{
-        backgroundImage: `url(${image2})`,
+        backgroundImage: `url(${playerImage})`,
         transform: `translateX(${position.x}px) translateY(${position.y}px)`,
       }}
       onDrag={onPlayerClick}

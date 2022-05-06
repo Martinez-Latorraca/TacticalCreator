@@ -2,41 +2,11 @@
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.navBar{
+  position: fixed;
+  top: 0;
+  background-color: aliceblue;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
-
 
 .pitch {
   position: absolute;
@@ -61,13 +31,21 @@
   position: relative;
 }
 
+.benches {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
 
-.playerHome{
-  position: absolute;
-  background-position: center;
-  background-repeat: no-repeat;
-  height: 48px;
-  width: 48px;
-  border-radius: 100%;
-  background-color: red;
+}
+
+.homeTeam {
+  display: inline-block;
+  padding-right: 100px;
+  padding-bottom: 20px;
+  
+}
+
+.awayTeam {
+  display: inline-block;
+  padding-bottom: 20px;
 }

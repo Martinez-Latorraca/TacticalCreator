@@ -1,15 +1,19 @@
 import { useState } from "react";
 import "./App.css";
 import Field from "./components/field/field";
-import Player from "./components/players/player";
+import NavBar from "./components/navBar/navBar";
+import Team from "./components/team/team.jsx";
 
 function App() {
+  // eslint-disable-next-line no-unused-vars
   const [pattern, setPattern] = useState("Circle");
   return (
     <div className="App">
       <Field param={pattern}></Field>
+      <NavBar className="navBar" />
+      {/*
       <div>
-        <select
+          <select
           className="patternSelector"
           onChange={(e) => setPattern(e.target.value)}
         >
@@ -21,8 +25,15 @@ function App() {
           <option value="Squares">Cuadrados</option>
         </select>
       </div>
-
-      <Player />
+         */}
+      <div className="benches">
+        <div className="homeTeam">
+          <Team></Team>
+        </div>
+        <div className="awayTeam">
+          <Team></Team>
+        </div>
+      </div>
     </div>
   );
 }
