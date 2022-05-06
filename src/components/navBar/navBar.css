@@ -1,14 +1,14 @@
 nav {
-    position: fixed;
+    margin: 0;
     top: 0;
     width: 100%;
     height: 50px;
-    background: linear-gradient(45deg, rgb(156, 14, 156), midnightblue);
+    background-color: #588f58;
+
 }
 
 .list {
     list-style-type: none;
-    background: linear-gradient(45deg, rgb(156, 14, 156), midnightblue);
     height: 100%;
     display: flex;
     justify-content: center;
@@ -24,7 +24,7 @@ nav {
 }
 
 .btn {
-    display: none;
+    display: inline-block;
     position: absolute;
     right: 10px;
     top: 7px;

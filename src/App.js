@@ -7,10 +7,11 @@ import Team from "./components/team/team.jsx";
 function App() {
   // eslint-disable-next-line no-unused-vars
   const [pattern, setPattern] = useState("Circle");
+
   return (
     <div className="App">
-      <Field param={pattern}></Field>
       <NavBar className="navBar" />
+      <Field param={pattern} ></Field>
       {/*
       <div>
           <select
