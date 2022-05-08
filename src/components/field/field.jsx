@@ -5,7 +5,7 @@ import lines from "./lines.png";
 import circles from "./circles.png";
 import squares from "./squares.png";
 
-const Field = ({param}) => {
+const Field = ({ param }) => {
   const [imageParam, setImageParam] = useState();
 
   useEffect(() => {
@@ -26,10 +26,9 @@ const Field = ({param}) => {
 
   return (
     <div className="wrapper">
-      <img className="pitch" src={pitch}></img> 
+      <img className="pitch" src={pitch} alt=""></img>
       <img className="pattern" src={imageParam} alt="" />
     </div>
-    
   );
 };
 

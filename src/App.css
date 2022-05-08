@@ -1,19 +1,20 @@
 .App {
   text-align: center;
+  position: relative;
 }
 
 .benches {
+  position: relative;
+  padding-top: 20px;
   bottom: 0;
   width: 100%;
   background-color: #588f58;
-
 }
 
 .homeTeam {
   display: inline-block;
   padding-right: 100px;
   padding-bottom: 20px;
-  
 }
 
 .awayTeam {

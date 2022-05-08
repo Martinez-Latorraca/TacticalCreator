@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useCallback, useState } from "react";
 import "./App.css";
 import Field from "./components/field/field";
 import NavBar from "./components/navBar/navBar";
@@ -7,11 +7,12 @@ import Team from "./components/team/team.jsx";
 function App() {
   // eslint-disable-next-line no-unused-vars
   const [pattern, setPattern] = useState("Circle");
+  const [squadNumber, setSquadNumber] = useState(8);
 
   return (
     <div className="App">
-      <NavBar className="navBar" />
-      <Field param={pattern} ></Field>
+      <NavBar squadNumber={setSquadNumber} />
+      <Field param={pattern}></Field>
       {/*
       <div>
           <select
