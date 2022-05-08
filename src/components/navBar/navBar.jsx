@@ -4,7 +4,7 @@ import squadSizeIcon from "./squadSize.png";
 import "./navBar.css";
 import SquadSize from "./squadSize";
 
-export default function Navbar({ props }) {
+export default function Navbar({ setSquadNumber }) {
   const [toggleMenu, setToggleMenu] = useState(false);
   const [toggleMenuSize, setToggleMenuSize] = useState(false);
   const [toggleBtnFormations, setToggleBtnFormations] = useState(true);
@@ -21,7 +21,8 @@ export default function Navbar({ props }) {
     setToggleBtnSquadSize(!toggleBtnSquadSize);
   };
   useEffect(() => {
-    props(squadSize);
+    console.log(squadSize, "navbar");
+    setSquadNumber(squadSize);
   });
 
   return (
@@ -45,7 +46,7 @@ export default function Navbar({ props }) {
       {toggleMenuSize && (
         <ul className="list">
           <a href="#" className="close" onClick={toggleSquadSize}></a>
-          <SquadSize squadNumber={setSquadSize}></SquadSize>
+          <SquadSize setSquadSize={setSquadSize}></SquadSize>
         </ul>
       )}
     </nav>

@@ -45,6 +45,19 @@
   background-image: linear-gradient(#f0a100 10%, #f70 100%);
 }
 
+.btn:after {
+  border: 1px solid #173948;
+  background-color: #2d728f;
+  background-image: -webkit-gradient(
+    linear,
+    left top,
+    left bottom,
+    color-stop(10%, #409cc3),
+    to(#255d75)
+  );
+  background-image: linear-gradient(#409cc3 10%, #255d75 100%);
+}
+
 .close {
   position: absolute;
   right: 30px;

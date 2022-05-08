@@ -1,9 +1,9 @@
 import "./player.css";
-import playerImage from "./img/player1.png";
+import playerImage from "./img/g18003.png";
 import { useState, useRef } from "react";
 import useDrag from "../../hooks/useDrag";
 
-const Player = () => {
+const Player = ({ playerNumber }) => {
   const divRef = useRef();
   const [position, setPosition] = useState({ x: 0, y: 0 });
   const onPlayerClick = (e) => {
@@ -25,9 +25,14 @@ const Player = () => {
       style={{
         backgroundImage: `url(${playerImage})`,
         transform: `translateX(${position.x}px) translateY(${position.y}px)`,
+        color: "white",
+        border: "4px solid black",
+        backgroundColor: "aqua",
       }}
       onDrag={onPlayerClick}
-    ></div>
+    >
+      {playerNumber}
+    </div>
   );
 };
 

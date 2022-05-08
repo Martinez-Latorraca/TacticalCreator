@@ -1,4 +1,4 @@
-import { useCallback, useState } from "react";
+import { useState } from "react";
 import "./App.css";
 import Field from "./components/field/field";
 import NavBar from "./components/navBar/navBar";
@@ -11,7 +11,7 @@ function App() {
 
   return (
     <div className="App">
-      <NavBar squadNumber={setSquadNumber} />
+      <NavBar setSquadNumber={setSquadNumber} />
       <Field param={pattern}></Field>
       {/*
       <div>
@@ -30,7 +30,7 @@ function App() {
          */}
       <div className="benches">
         <div className="homeTeam">
-          <Team></Team>
+          <Team squadSize={squadNumber}></Team>
         </div>
         <div className="awayTeam">
           <Team></Team>
