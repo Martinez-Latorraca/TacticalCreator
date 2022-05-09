@@ -3,6 +3,7 @@ import formations from "../../components/formations/img/formationsIcon.png";
 import squadSizeIcon from "./squadSize.png";
 import "./navBar.css";
 import SquadSize from "./squadSize";
+import SquadColors from "./squadColors";
 
 export default function Navbar({ setSquadNumber }) {
   const [toggleMenu, setToggleMenu] = useState(false);
@@ -47,6 +48,7 @@ export default function Navbar({ setSquadNumber }) {
         <ul className="list">
           <a href="#" className="close" onClick={toggleSquadSize}></a>
           <SquadSize setSquadSize={setSquadSize}></SquadSize>
+          <SquadColors setSquadColors={""}></SquadColors>
         </ul>
       )}
     </nav>

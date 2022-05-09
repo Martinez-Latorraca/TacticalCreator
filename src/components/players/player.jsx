@@ -18,7 +18,6 @@ const Player = ({ playerNumber }) => {
   });
 
   return (
-    // <div className="playerHome" style={{backgroundImage: `url(${image})`}}></div>
     <div
       ref={divRef}
       className="playerHome"
