@@ -1,11 +1,15 @@
 import "./player.css";
+import { useState, useRef, useEffect } from "react";
 import playerImage from "./img/g18003.png";
-import { useState, useRef } from "react";
 import useDrag from "../../hooks/useDrag";
 
-const Player = ({ playerNumber }) => {
+
+const Player = ({ playerNumber, colors }) => {
   const divRef = useRef();
   const [position, setPosition] = useState({ x: 0, y: 0 });
+
+  console.log("colors playr", colors)
+
   const onPlayerClick = (e) => {
     setPosition({
       x: position.x + e.movementX,
@@ -16,7 +20,8 @@ const Player = ({ playerNumber }) => {
   const drag = useDrag(divRef, [position], {
     onDrag: onPlayerClick,
   });
-
+  
+  
   return (
     <div
       ref={divRef}
@@ -24,9 +29,9 @@ const Player = ({ playerNumber }) => {
       style={{
         backgroundImage: `url(${playerImage})`,
         transform: `translateX(${position.x}px) translateY(${position.y}px)`,
-        color: "white",
-        border: "4px solid black",
-        backgroundColor: "aqua",
+        color: colors.font,
+        border: `4px solid ${colors.border}`,
+        backgroundColor: colors.bgr,
       }}
       onDrag={onPlayerClick}
     >
@@ -36,3 +41,4 @@ const Player = ({ playerNumber }) => {
 };
 
 export default Player;
+

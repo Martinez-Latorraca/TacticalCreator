@@ -1,19 +1,15 @@
 import "./team.css";
 import bench from "./img/bench.png";
 import Player from "../players/player";
-import { useEffect } from "react";
 
-const Team = ({ squadSize }) => {
+const Team = ({ squadSize, colors}) => {
   const players = [...Array(squadSize).keys()];
-  useEffect(() => {
-    console.log("teamSize", squadSize);
-    console.log("players", players);
-  });
+  console.log("colors team", colors)
 
   return (
     <div className="teamBench" style={{ backgroundImage: `url(${bench})` }}>
       {players.map((player) => (
-        <Player playerNumber={player + 1}></Player>
+        <Player playerNumber={player + 1} colors={colors} ></Player>
       ))}
     </div>
   );

@@ -11,6 +11,15 @@ export default function Navbar({ setSquadNumber }) {
   const [toggleBtnFormations, setToggleBtnFormations] = useState(true);
   const [toggleBtnSquadSize, setToggleBtnSquadSize] = useState(true);
   const [squadSize, setSquadSize] = useState(8);
+  
+  
+  const colors = {
+    font:"red", 
+    border:"black", 
+    bgr: "white"
+  };
+  
+  const [squadColors, setSquadColors] = useState(colors)
 
   const toggleNav = () => {
     setToggleMenu(!toggleMenu);
@@ -22,7 +31,6 @@ export default function Navbar({ setSquadNumber }) {
     setToggleBtnSquadSize(!toggleBtnSquadSize);
   };
   useEffect(() => {
-    console.log(squadSize, "navbar");
     setSquadNumber(squadSize);
   });
 
@@ -48,7 +56,7 @@ export default function Navbar({ setSquadNumber }) {
         <ul className="list">
           <a href="#" className="close" onClick={toggleSquadSize}></a>
           <SquadSize setSquadSize={setSquadSize}></SquadSize>
-          <SquadColors setSquadColors={""}></SquadColors>
+          <SquadColors setSquadColors={setSquadColors}></SquadColors>
         </ul>
       )}
     </nav>

@@ -1,32 +1,26 @@
-import { useState } from "react";
+ import { useState } from "react";
 import { SketchPicker } from "react-color";
 
-const ColorPicker = ({ text, color }) => {
+const ColorPicker = ({ text, color, defaultColor}) => {
   const [toggleColorPickerBase, setToggleColorPickerBase] = useState(false);
-  const [baseColorsPicked, setBaseColorsPicked] = useState("black");
+  const [baseColorsPicked, setBaseColorsPicked] = useState();
 
   const toggleBaseColor = () => {
     setToggleColorPickerBase(!toggleColorPickerBase);
-  };
-
-  const handleBaseColor = (e) => {
-    setBaseColorsPicked(e.hex);
-    console.log(e.hex);
-    color(e.hex);
   };
 
   return (
     <div className="wrapper-btn">
       <div
         className="btn-color"
-        style={{ backgroundColor: baseColorsPicked }}
+        style={{ backgroundColor: defaultColor }}
         onClick={toggleBaseColor}
       >
         {toggleColorPickerBase && (
           <div>
             <SketchPicker
               color={baseColorsPicked}
-              onChange={handleBaseColor}
+              onChange={(e)=> color(e.hex)}
               style={{ userSelect: "none" }}
             ></SketchPicker>
           </div>
