@@ -1,7 +1,7 @@
  import { useState } from "react";
 import { SketchPicker } from "react-color";
 
-const ColorPicker = ({ text, color, defaultColor}) => {
+const ColorPicker = ({ text, colors, defaultColor}) => {
   const [toggleColorPickerBase, setToggleColorPickerBase] = useState(false);
   const [baseColorsPicked, setBaseColorsPicked] = useState();
 
@@ -20,7 +20,7 @@ const ColorPicker = ({ text, color, defaultColor}) => {
           <div>
             <SketchPicker
               color={baseColorsPicked}
-              onChange={(e)=> color(e.hex)}
+              onChange={(e)=> colors(e.hex)}
               style={{ userSelect: "none" }}
             ></SketchPicker>
           </div>

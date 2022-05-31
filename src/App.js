@@ -10,17 +10,19 @@ function App() {
   // eslint-disable-next-line no-unused-vars
   const [pattern, setPattern] = useState("Circle");
   const [squadNumber, setSquadNumber] = useState(8);
-
-  const colors = {
-    font:"white", 
-    border:"red", 
-    bgr:"black" 
-  };
+  const [homeColors, setHomeColors] = useState({font:"", 
+    border:"", 
+    bgr:"" 
+  });
+  const [awayColors, setAwayColors] = useState({font:"", 
+    border:"", 
+    bgr:"" 
+  });
 
   return (
 
       <div className="App">
-        <NavBar setSquadNumber={setSquadNumber} />
+        <NavBar setSquadNumber={setSquadNumber} setHomeColors={setHomeColors} setAwayColors={setAwayColors} />
         <Field param={pattern}></Field>
         {/*
         <div>
@@ -39,10 +41,10 @@ function App() {
       */}
         <div className="benches">
           <div className="homeTeam">
-            <Team squadSize={squadNumber} colors={colors}></Team>
+            <Team squadSize={squadNumber} colors={homeColors}></Team>
           </div>
           <div className="awayTeam">
-            <Team squadSize={squadNumber} colors={colors}></Team>
+            <Team squadSize={squadNumber} colors={awayColors}></Team>
           </div>
         </div>
       </div>

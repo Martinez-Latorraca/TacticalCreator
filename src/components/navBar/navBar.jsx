@@ -5,7 +5,7 @@ import "./navBar.css";
 import SquadSize from "./squadSize";
 import SquadColors from "./squadColors";
 
-export default function Navbar({ setSquadNumber }) {
+export default function Navbar({ setSquadNumber, setHomeColors, setAwayColors }) {
   const [toggleMenu, setToggleMenu] = useState(false);
   const [toggleMenuSize, setToggleMenuSize] = useState(false);
   const [toggleBtnFormations, setToggleBtnFormations] = useState(true);
@@ -13,13 +13,20 @@ export default function Navbar({ setSquadNumber }) {
   const [squadSize, setSquadSize] = useState(8);
   
   
-  const colors = {
+  const awayColors = {
+    font:"black", 
+    border:"white", 
+    bgr: "red"
+  };
+  
+  const homeColors = {
     font:"red", 
     border:"black", 
     bgr: "white"
   };
   
-  const [squadColors, setSquadColors] = useState(colors)
+  const [squadHomeColors, setSquadHomeColors] = useState(homeColors)
+  const [squadAwayColors, setSquadAwayColors] = useState(awayColors)
 
   const toggleNav = () => {
     setToggleMenu(!toggleMenu);
@@ -32,6 +39,8 @@ export default function Navbar({ setSquadNumber }) {
   };
   useEffect(() => {
     setSquadNumber(squadSize);
+    setHomeColors(squadHomeColors)
+    setAwayColors(squadAwayColors)
   });
 
   return (
@@ -56,7 +65,8 @@ export default function Navbar({ setSquadNumber }) {
         <ul className="list">
           <a href="#" className="close" onClick={toggleSquadSize}></a>
           <SquadSize setSquadSize={setSquadSize}></SquadSize>
-          <SquadColors setSquadColors={setSquadColors}></SquadColors>
+          <SquadColors setSquadColors={setSquadHomeColors} colors={homeColors}></SquadColors>
+          <SquadColors setSquadColors={setSquadAwayColors} colors={awayColors}></SquadColors>
         </ul>
       )}
     </nav>

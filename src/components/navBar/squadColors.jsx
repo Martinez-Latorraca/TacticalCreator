@@ -2,18 +2,20 @@ import "./squadColors.css";
 import { useEffect, useState } from "react";
 import ColorPicker from "./colorPicker";
 
-const SquadColors = ({ setSquadColors }) => {
-  const [baseColor, setBaseColor] = useState("black");
-  const [secondColor, setSecondColor] = useState("white");
-  const [thirdColor, setThirdColor] = useState("red");
+const SquadColors = ({ setSquadColors, colors }) => {
+  const [baseColor, setBaseColor] = useState(colors.font);
+  const [secondColor, setSecondColor] = useState(colors.border);
+  const [thirdColor, setThirdColor] = useState(colors.bgr);
 
- 
-  const colors = {
-    font:baseColor, 
-    border:secondColor, 
-    bgr:thirdColor 
-  };
-  
+   useEffect(() => {
+    colors = {
+      font: baseColor, 
+      border: secondColor, 
+      bgr: thirdColor 
+    };
+    setSquadColors(colors);
+  }, []);
+
 
   return (
     <div>
