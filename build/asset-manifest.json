@@ -1,17 +1,17 @@
 {
   "files": {
-    "main.css": "/TacticalCreator/index.html%20%20/static/css/main.c1647ca7.css",
-    "main.js": "/TacticalCreator/index.html%20%20/static/js/main.77c6c92b.js",
-    "static/js/787.2ef39646.chunk.js": "/TacticalCreator/index.html%20%20/static/js/787.2ef39646.chunk.js",
-    "static/media/circles.png": "/TacticalCreator/index.html%20%20/static/media/circles.003f01a61aeb2a873dc4.png",
-    "static/media/pitch.png": "/TacticalCreator/index.html%20%20/static/media/pitch.1e08548288ca44f9a17c.png",
-    "index.html": "/TacticalCreator/index.html%20%20/index.html",
-    "main.c1647ca7.css.map": "/TacticalCreator/index.html%20%20/static/css/main.c1647ca7.css.map",
-    "main.77c6c92b.js.map": "/TacticalCreator/index.html%20%20/static/js/main.77c6c92b.js.map",
-    "787.2ef39646.chunk.js.map": "/TacticalCreator/index.html%20%20/static/js/787.2ef39646.chunk.js.map"
+    "main.css": "/TacticalCreator/index.html/static/css/main.c1647ca7.css",
+    "main.js": "/TacticalCreator/index.html/static/js/main.b7421573.js",
+    "static/js/787.2ef39646.chunk.js": "/TacticalCreator/index.html/static/js/787.2ef39646.chunk.js",
+    "static/media/circles.png": "/TacticalCreator/index.html/static/media/circles.003f01a61aeb2a873dc4.png",
+    "static/media/pitch.png": "/TacticalCreator/index.html/static/media/pitch.1e08548288ca44f9a17c.png",
+    "index.html": "/TacticalCreator/index.html/index.html",
+    "main.c1647ca7.css.map": "/TacticalCreator/index.html/static/css/main.c1647ca7.css.map",
+    "main.b7421573.js.map": "/TacticalCreator/index.html/static/js/main.b7421573.js.map",
+    "787.2ef39646.chunk.js.map": "/TacticalCreator/index.html/static/js/787.2ef39646.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.c1647ca7.css",
-    "static/js/main.77c6c92b.js"
+    "static/js/main.b7421573.js"
   ]
 }
