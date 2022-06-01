@@ -45,14 +45,12 @@ export default function Navbar({ setSquadNumber, setHomeColors, setAwayColors })
 
   return (
     <nav>
-      <div className="btn-wrapper">
         <div onClick={toggleNav} className="btn-formations">
           <img src={formations} alt="" />
         </div>
         <div onClick={toggleSquadSize} className="btn-squad-size">
           <img src={squadSizeIcon} alt="" />
         </div>
-      </div>
       {toggleMenu && (
         <ul className="list">
           <a href="#" className="close" onClick={toggleNav}></a>

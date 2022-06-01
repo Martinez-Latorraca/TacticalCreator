@@ -1,6 +1,10 @@
 .wrapper {
   position: relative;
   background-color: #588f58;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-self: center;
 }
 
 .pitch {
@@ -11,5 +15,5 @@
   .pitch,
   .pattern {
     transform: rotate(90deg);
-  }
+ }
 }

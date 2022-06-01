@@ -1,7 +1,3 @@
-nav {
-  text-align: center;
-  background-color: #588f58;
-}
 
 .list {
   padding: 0;
@@ -28,9 +24,7 @@ nav {
   z-index: 100;
 }
 .items {
-  margin-right: 20px;
   font-size: 20px;
-  text-transform: uppercase;
   color: #f1f1f1;
   cursor: pointer;
 }
@@ -38,7 +32,7 @@ nav {
 .btn-wrapper {
   position: relative;
   display: block;
-  text-align: left;
+ 
 }
 
 .btn-formations,
@@ -46,8 +40,6 @@ nav {
   display: inline-block;
   z-index: 10;
   height: 48px;
-  margin-top: 10px;
-  margin-left: 22px;
   padding: 0.4rem;
   border: 1px solid #995309;
   border-radius: 4px;
@@ -77,4 +69,17 @@ nav {
     to(#f70)
   );
   background-image: linear-gradient(#f0a100 10%, #f70 100%);
+}
+
+.btn-formations{
+  margin-top: 10px;
+  margin-right: 10px;
+}
+
+@media (max-width: 1024px) {
+  .btn-formations,
+  .btn-squad-size {
+    display: block;
+  }
+  
 }

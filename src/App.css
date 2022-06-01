@@ -1,13 +1,19 @@
 .App {
   text-align: center;
-  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #588f58;
+}
+.navbar {
+  text-align: center;
+  background-color: #588f58;
+  display: flex;
 }
 
 .benches {
-  position: relative;
-  padding-top: 20px;
-  bottom: 0;
-  width: 100%;
+ 
   background-color: #588f58;
 }
 
@@ -23,3 +29,28 @@
 }
 
 
+@media (max-width: 1024px) {
+  .App{
+    flex-direction: row;
+    justify-content: center;
+    order: 0;
+  }
+    .benches{
+    transform: rotate(270deg);
+    top:  50%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    order: 2;
+  }
+  .homeTeam,
+  .awayTeam{
+    padding: 0;
+    
+  }
+  .navbar{
+    order: 1;
+    align-self: flex-start;
+    
+  }
+}

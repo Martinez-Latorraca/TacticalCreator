@@ -6,3 +6,11 @@
   background-color: transparent;
   margin-bottom: 11%;
 }
+
+@media (max-width: 1024px) {
+  .teamBench{
+    display: flex;
+    order: 2;
+    
+  }
+}
