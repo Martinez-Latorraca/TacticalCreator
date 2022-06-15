@@ -25,7 +25,9 @@ function App() {
         <div className="navbar" >
           <NavBar setSquadNumber={setSquadNumber} setHomeColors={setHomeColors} setAwayColors={setAwayColors} />
         </div>
-        <Field param={pattern}></Field>
+        <div className="field">
+          <Field param={pattern}></Field>
+        </div>
         {/*
         <div>
         <select

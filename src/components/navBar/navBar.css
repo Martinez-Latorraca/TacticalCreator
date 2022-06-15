@@ -77,9 +77,6 @@
 }
 
 @media (max-width: 1024px) {
-  .btn-formations,
-  .btn-squad-size {
-    display: block;
-  }
+
   
 }
