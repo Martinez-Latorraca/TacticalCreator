@@ -7,9 +7,20 @@
 @media (max-width: 1024px) {
   .pitch,
   .pattern {
+    left: -25%;
     transform: rotate(90deg);
-    width: 100vw;
+    width: 150vw;
+    height: 50vh;
+ }
+ .wrapper{
+  position: relative;
+  top: 25%;
+  width: 100vw;
+  height: 100vh;
  }
 
+ .pattern{
+  position: absolute;
+ }
  
 }

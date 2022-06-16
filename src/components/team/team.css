@@ -10,7 +10,6 @@
 @media (max-width: 1024px) {
   .teamBench{
     display: flex;
-    order: 2;
     
   }
 }
