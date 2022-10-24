@@ -19,6 +19,7 @@ function App() {
   });
 
   return (
+<<<<<<< HEAD
     <div className="App">
       <NavBar
         setSquadNumber={setSquadNumber}
@@ -27,6 +28,17 @@ function App() {
       />
       <Field param={pattern}></Field>
       {/*
+=======
+
+      <div className="App">
+        <div className="navbar" >
+          <NavBar setSquadNumber={setSquadNumber} setHomeColors={setHomeColors} setAwayColors={setAwayColors} />
+        </div>
+        <div className="field">
+          <Field param={pattern}></Field>
+        </div>
+        {/*
+>>>>>>> fb3ba1e0dc46c1117617641e71b0379a940041e1
         <div>
         <select
         className="patternSelector"

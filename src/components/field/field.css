@@ -1,12 +1,21 @@
-.wrapper {
-  background-color: #588f58;
-}
-
 .pitch {
   position: absolute;
 }
 
 @media (max-width: 1024px) {
+  .pitch,
+  .pattern {
+    transform: rotate(90deg);
+    width: 150vw;
+    height: 50vh;
+  }
   .wrapper {
+    position: relative;
+    width: 100vw;
+    top: 25%;
+  }
+
+  .pattern {
+    position: absolute;
   }
 }
