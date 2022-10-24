@@ -4,27 +4,29 @@ import Field from "./components/field/field";
 import NavBar from "./components/navBar/navBar";
 import Team from "./components/team/team.jsx";
 
-
-
 function App() {
-  // eslint-disable-next-line no-unused-vars
   const [pattern, setPattern] = useState("Circle");
   const [squadNumber, setSquadNumber] = useState(8);
-  const [homeColors, setHomeColors] = useState({font:"", 
-    border:"", 
-    bgr:"" 
+  const [homeColors, setHomeColors] = useState({
+    font: "",
+    border: "",
+    bgr: "",
   });
-  const [awayColors, setAwayColors] = useState({font:"", 
-    border:"", 
-    bgr:"" 
+  const [awayColors, setAwayColors] = useState({
+    font: "",
+    border: "",
+    bgr: "",
   });
 
   return (
-
-      <div className="App">
-        <NavBar setSquadNumber={setSquadNumber} setHomeColors={setHomeColors} setAwayColors={setAwayColors} />
-        <Field param={pattern}></Field>
-        {/*
+    <div className="App">
+      <NavBar
+        setSquadNumber={setSquadNumber}
+        setHomeColors={setHomeColors}
+        setAwayColors={setAwayColors}
+      />
+      <Field param={pattern}></Field>
+      {/*
         <div>
         <select
         className="patternSelector"
@@ -39,15 +41,15 @@ function App() {
         </select>
         </div>
       */}
-        <div className="benches">
-          <div className="homeTeam">
-            <Team squadSize={squadNumber} colors={homeColors}></Team>
-          </div>
-          <div className="awayTeam">
-            <Team squadSize={squadNumber} colors={awayColors}></Team>
-          </div>
+      <div className="benches">
+        <div className="homeTeam">
+          <Team squadSize={squadNumber} colors={homeColors}></Team>
+        </div>
+        <div className="awayTeam">
+          <Team squadSize={squadNumber} colors={awayColors}></Team>
         </div>
       </div>
+    </div>
   );
 }
 

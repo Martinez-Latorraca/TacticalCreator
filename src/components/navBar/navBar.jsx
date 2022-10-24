@@ -5,28 +5,31 @@ import "./navBar.css";
 import SquadSize from "./squadSize";
 import SquadColors from "./squadColors";
 
-export default function Navbar({ setSquadNumber, setHomeColors, setAwayColors }) {
+export default function Navbar({
+  setSquadNumber,
+  setHomeColors,
+  setAwayColors,
+}) {
   const [toggleMenu, setToggleMenu] = useState(false);
   const [toggleMenuSize, setToggleMenuSize] = useState(false);
   const [toggleBtnFormations, setToggleBtnFormations] = useState(true);
   const [toggleBtnSquadSize, setToggleBtnSquadSize] = useState(true);
   const [squadSize, setSquadSize] = useState(8);
-  
-  
+
   const awayColors = {
-    font:"black", 
-    border:"white", 
-    bgr: "red"
+    font: "black",
+    border: "white",
+    bgr: "red",
   };
-  
+
   const homeColors = {
-    font:"red", 
-    border:"black", 
-    bgr: "white"
+    font: "red",
+    border: "black",
+    bgr: "white",
   };
-  
-  const [squadHomeColors, setSquadHomeColors] = useState(homeColors)
-  const [squadAwayColors, setSquadAwayColors] = useState(awayColors)
+
+  const [squadHomeColors, setSquadHomeColors] = useState(homeColors);
+  const [squadAwayColors, setSquadAwayColors] = useState(awayColors);
 
   const toggleNav = () => {
     setToggleMenu(!toggleMenu);
@@ -39,12 +42,12 @@ export default function Navbar({ setSquadNumber, setHomeColors, setAwayColors })
   };
   useEffect(() => {
     setSquadNumber(squadSize);
-    setHomeColors(squadHomeColors)
-    setAwayColors(squadAwayColors)
+    setHomeColors(squadHomeColors);
+    setAwayColors(squadAwayColors);
   });
 
   return (
-    <nav>
+    <>
       <div className="btn-wrapper">
         <div onClick={toggleNav} className="btn-formations">
           <img src={formations} alt="" />
@@ -55,20 +58,30 @@ export default function Navbar({ setSquadNumber, setHomeColors, setAwayColors })
       </div>
       {toggleMenu && (
         <ul className="list">
-          <a href="#" className="close" onClick={toggleNav}></a>
-          <li className="items">Home</li>
-          <li className="items">Services</li>
-          <li className="items">Contact</li>
+          <div className="close" onClick={toggleNav}></div>
+          <div className="wrap-items">
+            <li className="items">Home</li>
+            <li className="items">Services</li>
+            <li className="items">Contact</li>
+          </div>
         </ul>
       )}
       {toggleMenuSize && (
         <ul className="list">
-          <a href="#" className="close" onClick={toggleSquadSize}></a>
-          <SquadSize setSquadSize={setSquadSize}></SquadSize>
-          <SquadColors setSquadColors={setSquadHomeColors} colors={homeColors}></SquadColors>
-          <SquadColors setSquadColors={setSquadAwayColors} colors={awayColors}></SquadColors>
+          <div className="close" onClick={toggleSquadSize}></div>
+          <div className="wrap-items">
+            <SquadSize setSquadSize={setSquadSize}></SquadSize>
+            <SquadColors
+              setSquadColors={setSquadHomeColors}
+              colors={homeColors}
+            ></SquadColors>
+            <SquadColors
+              setSquadColors={setSquadAwayColors}
+              colors={awayColors}
+            ></SquadColors>
+          </div>
         </ul>
       )}
-    </nav>
+    </>
   );
 }

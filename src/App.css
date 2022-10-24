@@ -1,25 +1,30 @@
 .App {
-  text-align: center;
-  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .benches {
-  position: relative;
-  padding-top: 20px;
-  bottom: 0;
-  width: 100%;
+  display: flex;
+  justify-content: center;
   background-color: #588f58;
 }
 
 .homeTeam {
-  display: inline-block;
-  padding-right: 100px;
-  padding-bottom: 20px;
+  margin-right: 40px;
 }
 
 .awayTeam {
-  display: inline-block;
-  padding-bottom: 20px;
+  margin-left: 40px;
 }
 
-
+@media (max-width: 1024px) {
+  .App {
+    transform: rotate(90deg);
+    height: inherit;
+    width: inherit;
+  }
+  .benches {
+  }
+}

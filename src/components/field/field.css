@@ -1,5 +1,4 @@
 .wrapper {
-  position: relative;
   background-color: #588f58;
 }
 
@@ -8,8 +7,6 @@
 }
 
 @media (max-width: 1024px) {
-  .pitch,
-  .pattern {
-    transform: rotate(90deg);
+  .wrapper {
   }
 }
