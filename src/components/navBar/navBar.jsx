@@ -47,18 +47,13 @@ export default function Navbar({
   });
 
   return (
-<<<<<<< HEAD
-    <>
-      <div className="btn-wrapper">
-=======
     <nav>
->>>>>>> fb3ba1e0dc46c1117617641e71b0379a940041e1
-        <div onClick={toggleNav} className="btn-formations">
-          <img src={formations} alt="" />
-        </div>
-        <div onClick={toggleSquadSize} className="btn-squad-size">
-          <img src={squadSizeIcon} alt="" />
-        </div>
+      <div onClick={toggleNav} className="btn-formations">
+        <img src={formations} alt="" />
+      </div>
+      <div onClick={toggleSquadSize} className="btn-squad-size">
+        <img src={squadSizeIcon} alt="" />
+      </div>
       {toggleMenu && (
         <ul className="list">
           <div className="close" onClick={toggleNav}></div>
@@ -85,6 +80,6 @@ export default function Navbar({
           </div>
         </ul>
       )}
-    </>
+    </nav>
   );
 }

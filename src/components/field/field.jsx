@@ -1,8 +1,8 @@
 import "./field.css";
 import { useEffect, useState } from "react";
-import pitch from "./pitch.png";
+import pitch from "./pitch3.png";
 import lines from "./lines.png";
-import circles from "./circles.png";
+import circles from "./circles3.png";
 import squares from "./squares.png";
 
 const Field = ({ param }) => {

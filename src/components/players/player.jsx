@@ -3,12 +3,9 @@ import { useState, useRef, useEffect } from "react";
 import playerImage from "./img/g18003.png";
 import useDrag from "../../hooks/useDrag";
 
-
 const Player = ({ playerNumber, colors }) => {
   const divRef = useRef();
   const [position, setPosition] = useState({ x: 0, y: 0 });
-
-  console.log("colors playr", colors)
 
   const onPlayerClick = (e) => {
     setPosition({
@@ -20,8 +17,7 @@ const Player = ({ playerNumber, colors }) => {
   const drag = useDrag(divRef, [position], {
     onDrag: onPlayerClick,
   });
-  
-  
+
   return (
     <div
       ref={divRef}
@@ -41,4 +37,3 @@ const Player = ({ playerNumber, colors }) => {
 };
 
 export default Player;
-

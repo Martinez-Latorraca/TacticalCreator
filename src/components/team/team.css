@@ -1,15 +1,9 @@
 .teamBench {
   background-position: center;
   background-repeat: no-repeat;
-  height: 100px;
-  width: 400px;
+  height: 400px;
+  width: 100px;
   background-color: transparent;
-  margin-bottom: 11%;
-}
-
-@media (max-width: 1024px) {
-  .teamBench{
-    display: flex;
-    
-  }
+  margin-bottom: 50%;
+  margin-top: 50%;
 }
